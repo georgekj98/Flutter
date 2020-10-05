@@ -121,13 +121,23 @@ void main() => runApp(MaterialApp(
     appBar: AppBar(
       title: Text("Flutter App"),
       centerTitle: true,
-      backgroundColor: Colors.,
+      backgroundColor: Colors.redAccent[700],
     ),
     body: Center(
-      child: Text("Hello Flutter world"),
+      child: Text(
+          "Hello Flutter world",
+        style: TextStyle(
+          fontSize: 25.0,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2.0,
+          color: Colors.black45
+        ),
+      ),
     ),
     floatingActionButton: FloatingActionButton(
+      onPressed: () {},
       child: Text("Click"),
+      backgroundColor: Colors.black,
     ),
   )
 ));
