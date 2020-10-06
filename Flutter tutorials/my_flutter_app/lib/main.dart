@@ -117,27 +117,34 @@ class _MyHomePageState extends State<MyHomePage> {
 }*/
 
 void main() => runApp(MaterialApp(
-  home: Scaffold(
-    appBar: AppBar(
-      title: Text("Flutter App"),
-      centerTitle: true,
-      backgroundColor: Colors.redAccent[700],
-    ),
-    body: Center(
-      child: Text(
+  home: Home()
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter App"),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent[700],
+      ),
+      body: Center(
+        child: Text(
           "Hello Flutter world",
-        style: TextStyle(
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 2.0,
-          color: Colors.black45
+          style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+              color: Colors.black45
+          ),
         ),
       ),
-    ),
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {},
-      child: Text("Click"),
-      backgroundColor: Colors.black,
-    ),
-  )
-));
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("Hit it"),
+        backgroundColor: Colors.redAccent,
+      ),
+    );
+  }
+}
